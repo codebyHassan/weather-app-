@@ -1,0 +1,49 @@
+{% extends "base.html" %} {% block 'title' %} Weather App - knows your Weather {% endblock 'title' %} {% block 'content' %} {% load static %}
+{% if Exp %}
+{% for msg in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Error !</strong> {{msg}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+{% endfor %}
+{% endif %}
+
+
+<div class="container my-5">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <h1 class="text-center">Weather app</h1>
+            <form action="" method="post" class="my-5">
+                {% csrf_token %}
+                <input type="text" class="form-control" name="city" placeholder="Enter Any city to know the weather"> <br>
+                <button type="submit" class="btn btn-primary">Search</button>
+
+            </form>
+            <div class="shadow p-5">
+                <div class="left-panel panel">
+                    <div class="date">
+                        {{day}}
+                    </div>
+                    <div class="city">
+                        {{city}}
+                    </div>
+                    <div class="temp">
+                        <img src="https://openweathermap.org/img/w/{{icon}}.png" alt="" srcset=""> {{temp}} &deg;C
+                    </div>
+                </div>
+                <div class="right-panel panel">
+                    <div class="desc">
+                        {{desc}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock 'content' %}
