@@ -7,3 +7,5 @@ Clean and responsive UI with Bootstrap 💻
 Fully functional backend using Django and Python 🐍
 This project helped me deepen my understanding of API integration, backend logic, and responsive front-end design. It's a small but practical tool that demonstrates how simple tech stacks can solve everyday problems.
 Feel free to check it out or give feedback — always open to learning and improving!
+
+https://github.com/user-attachments/assets/c8fc485d-0564-4804-a648-9f806b11b8bf
